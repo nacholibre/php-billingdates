@@ -1,6 +1,9 @@
 # php-billingdates
 Generates start and end date for a billing cycle in PHP.
 
+## Installation
+`composer require nacholibre/billingdates`
+
 ## Example usage
 ```
 <?php
