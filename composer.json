@@ -1,0 +1,13 @@
+{
+    "name": "nacholibre/billingdates",
+    "description": "Generates start and end date for a billing cycle.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yoan Arnaudov",
+            "email": "jonidev@gmail.com"
+        }
+    ],
+    "require": {}
+}
