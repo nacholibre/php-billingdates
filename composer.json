@@ -9,5 +9,8 @@
             "email": "jonidev@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {"BillingDates\\": "src/"}
+    },
     "require": {}
 }
