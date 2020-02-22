@@ -35,6 +35,9 @@ class Calculator {
             //meaning it's next cycle
             $start = $now->format('Y-m-') . $billingStartDateDayOfMonth;
             $end = $nextMonth->format('Y-m-') . $billingStartDateDayOfMonth;
+
+            $start = \DateTime::createFromFormat('Y-m-d', $start);
+            $end = \DateTime::createFromFormat('Y-m-d', $end);
         }
 
         return [

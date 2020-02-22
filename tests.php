@@ -2,7 +2,7 @@
 
 namespace BillingDates;
 
-include __DIR__ . '/BillingDates.php';
+include __DIR__ . '/src/Calculator.php';
 
 function run_tests() {
     $defaultFormat = 'Y-m-d';
@@ -37,6 +37,12 @@ function run_tests() {
     $data = $calculator->calculateMonthlyCycle($startBillingDate, $stubCurrentDate);
     assert($data['start']->format('Y-m-d') == '2020-01-31');
     assert($data['end']->format('Y-m-d') == '2020-02-29');
+
+    $startBillingDate = \DateTime::createFromFormat($defaultFormat, '2020-02-20');
+    $stubCurrentDate = \DateTime::createFromFormat($defaultFormat, '2020-02-22');
+    $data = $calculator->calculateMonthlyCycle($startBillingDate, $stubCurrentDate);
+    assert($data['start']->format('Y-m-d') == '2020-02-20');
+    assert($data['end']->format('Y-m-d') == '2020-03-20');
 }
 
 run_tests();
